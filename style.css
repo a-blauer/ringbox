@@ -234,3 +234,16 @@ table.odds td.n,table.odds th.n{text-align:right;font-variant-numeric:tabular-nu
 .tabsub button{border:0;background:none;padding:10px 12px;cursor:pointer;font-weight:600;color:var(--ink3);border-bottom:2px solid transparent;white-space:nowrap}
 .tabsub button.on{color:var(--gold2);border-color:var(--gold2)}
 @media(max-width:600px){.two{grid-template-columns:1fr}.sheet .sheet-h h2{font-size:21px}}
+
+.focus-ring{position:absolute;width:64px;height:64px;margin:-32px 0 0 -32px;border:2px solid var(--gold2);border-radius:50%;opacity:0;pointer-events:none}
+.focus-ring.go{animation:foc .9s ease-out}
+@keyframes foc{0%{opacity:1;transform:scale(1.5)}40%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){.focus-ring.go{animation:none}}
+.fmeter{width:64px;height:6px;border-radius:3px;background:rgba(255,255,255,.25);overflow:hidden;flex:none;margin-bottom:5px}
+.fmeter i{display:block;height:100%;width:0;background:var(--gold2);transition:width .15s}
+.camctl{display:grid;gap:10px;margin-top:10px}
+.camctl:empty{display:none}
+.camctl .lbl{display:block;font-size:12px;font-weight:600;color:var(--ink2);margin-bottom:2px}
+.camctl input[type=range]{width:100%;accent-color:var(--gold);height:32px}
+.viewfinder .frame{transition:width .15s}
+.viewfinder .idle[hidden]{display:none}

@@ -1,5 +1,5 @@
 // RingBox service worker: app shell + data cached on install, card images cached as you browse.
-const V = 'ringbox-v1';
+const V = 'ringbox-v2';
 const SHELL = ['./', 'index.html', 'style.css', 'app.js', 'scan.js', 'manifest.webmanifest', 'icons/icon.svg', 'icons/icon-192.png',
   'data/cards.json', 'data/sets.json', 'data/formats.json'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });

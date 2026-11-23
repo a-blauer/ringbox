@@ -275,7 +275,7 @@ window.Scanner = (() => {
       <div>
         <div class="viewfinder"><video playsinline muted></video><div class="frame" style="width:${p.frame || 58}%"><div class="band t"></div><div class="band c"></div></div><div class="focus-ring"></div>
           <div class="vf-btns"><button id="torch" hidden aria-label="Flashlight"><svg viewBox="0 0 24 24"><path d="M9 3h6l-1 6h3l-7 12 1-8H8z"/></svg></button></div>
-          <div class="idle"><div><p style="font-family:Marcellus,serif;font-size:20px;margin:0 0 6px">Point your camera at a card</p><p class="small" style="margin:0 0 14px;opacity:.8">Fit the card inside the frame. RingBox reads the title and the collector number at the bottom (like 1R89).</p></div></div>
+          <div class="idle"><div><p class="t">Point your camera at a card</p><p class="small" style="margin:0 0 14px;opacity:.8">Fit the card inside the frame. RingBox reads the title and the collector number at the bottom (like 1R89).</p></div></div>
           <div class="hud"><span id="stat">${esc(status)}</span><span class="fmeter" title="Focus"><i id="focusM"></i></span></div></div>
         <div id="camctl" class="camctl"></div>
         <div class="row" style="margin-top:10px"><button class="btn primary" id="camBtn">Start camera</button><label class="btn"><input type="file" id="photo" accept="image/*" capture="environment" hidden>Scan a photo</label>
